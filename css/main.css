@@ -15,7 +15,7 @@ html, body{
     -webkit-flex: 1 1 auto; /* shorthand for properties below, grow, shrink and basis */
     /*-webkit-flex-grow: 0; /* adjust values to make it grow faster eg 1, 2, 3, 4, 5 */
     /* -webkit-flex-shrink: 1;
-    /* -webkit-flex-basis: auto;*/
+    /* -webkit-flex-basis: auto;*/ /* set to 0 if you want to use precise ratio's */
 }
 
 header{
