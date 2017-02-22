@@ -1,23 +1,77 @@
-html, body{
+/* html, body{
 	height:100%;
-} 
+} */
 
-.flex{
+/* !!LAYOUT START: Header top, main article, aside on right and footer, this of can be changed with -webkit-order:# */
+
+header, footer {
+	height:100px; 
+}
+
+.middle {
+	display:-webkit-flex;
+	min-height:500px;
+}
+
+header, article, aside, footer {
+	display: -webkit-flex; 
+	-webkit-justify-content:center; /* align content center */ 
+	-webkit-align-items:center;
+}
+
+article {
+	-webkit-flex: 3 0 0;
+}
+
+aside {
+	-webkit-flex: 1 0 0;
+}
+
+/* !!LAYOUT END */
+
+/* .flex{
 	display: -webkit-flex; /* Why -webkit-flex? See bottom 1.0 */
-	/* -webkit-flex-flow:row; /* -column */
+	/* -webkit-flex-flow:column; /* -column */
 	/* -webkit-justify-content:flex-start; /* flex-start, flex-center, space-around, space-between */
-	-webkit-align-items: flex-start; /* stretch */
+	/* -webkit-align-items: /*flex-start; /* stretch,*/ /*center; /**/
+	/* height: 100px;
+    width: 200px; */
+    /*-webkit-flex: 0 1 auto; /* shorthand for properties below, grow, shrink and basis */
+    /*-webkit-flex-grow: 0; /* adjust values to make it grow faster eg 1, 2, 3, 4, 5 */
+    /* -webkit-flex-shrink: 1;
+    /* -webkit-flex-basis: auto;*/ /* set to 0 if you want to use precise ratio's */
+    /*-webkit-order:
+}
+
+/*.flex > *{
+	height: 100px;
+	width: 100px;*/
+/*}
+
+
+
+
+
+
+
+/* footer {
+	margin-top: auto; /* Keep footer at bottom with margin at top of footer 
+}*/
+
+/* Test margin */
+
+/*.flex {
+	display: -webkit-flex;
+	-webkit-flex-flow:row;
+	-webkit-align-items: center;
 }
 
 .flex > *{
 	height: 100px;
-    width: 200px;
-    -webkit-flex: 1 1 auto; /* shorthand for properties below, grow, shrink and basis */
-    /*-webkit-flex-grow: 0; /* adjust values to make it grow faster eg 1, 2, 3, 4, 5 */
-    /* -webkit-flex-shrink: 1;
-    /* -webkit-flex-basis: auto;*/ /* set to 0 if you want to use precise ratio's */
+	width: 100px;
+	margin: auto;
 }
-
+*/
 header{
     background: rgba(200, 200, 200, 1);
 }
