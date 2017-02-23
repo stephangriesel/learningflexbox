@@ -8,30 +8,56 @@ header, footer {
 	height:100px; 
 }
 
-.middle {
+.middle { /* Displays as flex container, if not specified then sections will show below each other */
 	display:-webkit-flex;
-	min-height:500px;
+	/* min-height:500px;*/
 }
 
-header, article, aside, footer {
+/*header, article, aside, footer {
 	display: -webkit-flex; 
 	-webkit-justify-content:center; /* align content center */ 
+	/*-webkit-align-items:center;
+	-webkit-order:0;*/
+/*}*/
+
+header {
+	display: -webkit-flex;
+	-webkit-flex: 1 0 0;
+	-webkit-justify-content:center; /* align content center */ 
 	-webkit-align-items:center;
+	-webkit-order:0;
 }
 
 article {
+	display: -webkit-flex;
 	-webkit-flex: 3 0 0;
+	-webkit-justify-content:center; /* align content center */ 
+	-webkit-flex-flow:column;
+	-webkit-align-items:center;
+	-webkit-order:2;
 }
 
 aside {
+	display: -webkit-flex;
 	-webkit-flex: 1 0 0;
+	-webkit-justify-content:center; /* align content center */ 
+	-webkit-align-items:center;
+	-webkit-order:3;
+}
+
+footer {
+	display: -webkit-flex;
+	-webkit-flex: 1 0 0;
+	-webkit-justify-content:center; /* align content center */ 
+	-webkit-align-items:center;
+	-webkit-order:3;
 }
 
 /* !!LAYOUT END */
 
 /* .flex{
 	display: -webkit-flex; /* Why -webkit-flex? See bottom 1.0 */
-	/* -webkit-flex-flow:column; /* -column */
+	/* -webkit-flex-flow:column; /* -column. -row. */
 	/* -webkit-justify-content:flex-start; /* flex-start, flex-center, space-around, space-between */
 	/* -webkit-align-items: /*flex-start; /* stretch,*/ /*center; /**/
 	/* height: 100px;
