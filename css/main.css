@@ -1,12 +1,8 @@
-/* html, body{
-	height:100%;
-} */
-
 /* !!LAYOUT START: Header top, main article, aside on right and footer, this of can be changed with -webkit-order:# */
 
-header, footer {
+/* header, footer {
 	height:100px; 
-}
+} */
 
 .middle { /* Displays as flex container, if not specified then sections will show below each other */
 	display:-webkit-flex;
@@ -19,6 +15,87 @@ header, footer {
 	/*-webkit-align-items:center;
 	-webkit-order:0;*/
 /*}*/
+
+/* Sections Background */
+
+header{
+    background: rgba(200, 200, 200, 1);
+}
+article{
+    background: rgba(200, 200, 200, .8);
+}
+aside{
+   background: rgba(200, 200, 200, .6);
+}
+footer{
+   background: rgba(200, 200, 200, .4);
+}
+
+/* Sections Flexbox */
+
+header {
+	/* Flexbox Properties */
+	display: -webkit-flex;
+	-webkit-flex: 1 0 0;
+	-webkit-justify-content:center; /* align content center */ 
+	-webkit-align-items:center;
+	-webkit-order:0;
+	/* Layout */
+	padding:1em;
+}
+
+article {
+	/* Flexbox Properties */
+	display: -webkit-flex;
+	-webkit-flex: 3 0 0;
+	-webkit-justify-content:center; /* align content center */ 
+	-webkit-flex-flow:column;
+	-webkit-align-items:center;
+	-webkit-order:1;
+	/* Layout */
+	padding:1em;
+}
+
+.boldtext {
+	font-weight:bold;
+}
+
+aside {
+	/* Flexbox Properties */
+	display: -webkit-flex;
+	-webkit-flex: 1 0 0;
+	-webkit-flex-flow: column;
+	-webkit-justify-content:center; /* align content center */ 
+	-webkit-align-items:center;
+	-webkit-order:2;
+	/* Layout */
+	padding:1em;
+}
+
+footer {
+	/* Flexbox Properties */
+	display: -webkit-flex;
+	-webkit-flex: 1 0 0;
+	-webkit-flex-flow:row;
+	-webkit-justify-content:center; /* align content center */ 
+	/* -webkit-align-items:center; */
+	-webkit-order:3;
+	/* Layout */
+	margin:0;
+	padding:1em;
+}
+
+footer li {
+	display:inline;
+}
+
+
+
+/* Media Queries Start */
+/* Mobile first queries */
+
+/* Larger than mobile */
+@media (max-width:300px) {
 
 header {
 	display: -webkit-flex;
@@ -34,82 +111,174 @@ article {
 	-webkit-justify-content:center; /* align content center */ 
 	-webkit-flex-flow:column;
 	-webkit-align-items:center;
-	-webkit-order:2;
+	-webkit-order:1;
 }
 
 aside {
 	display: -webkit-flex;
 	-webkit-flex: 1 0 0;
+	-webkit-flex-flow: column;
 	-webkit-justify-content:center; /* align content center */ 
 	-webkit-align-items:center;
-	-webkit-order:3;
+	-webkit-order:2;
 }
 
 footer {
 	display: -webkit-flex;
 	-webkit-flex: 1 0 0;
+	-webkit-flex-flow:row;
 	-webkit-justify-content:center; /* align content center */ 
-	-webkit-align-items:center;
+	/* -webkit-align-items:center; */
 	-webkit-order:3;
 }
 
+footer li{
+	display:inline;
+}
+
+
+} 
+
+/* Larger than phablet */
+@media (max-width: 550px) {
+
+header {
+	display: -webkit-flex;
+	-webkit-flex: 1 0 0;
+	-webkit-justify-content:center; /* align content center */ 
+	-webkit-align-items:center;
+	-webkit-order:0;
+}
+
+article {
+	display: -webkit-flex;
+	-webkit-flex: 3 0 0;
+	-webkit-justify-content:center; /* align content center */ 
+	-webkit-flex-flow:column;
+	-webkit-align-items:center;
+	-webkit-order:1;
+}
+
+aside {
+	display: -webkit-flex;
+	-webkit-flex: 1 0 0;
+	-webkit-flex-flow: column;
+	-webkit-justify-content:center; /* align content center */ 
+	-webkit-align-items:center;
+	-webkit-order:2;
+}
+
+footer {
+	display: -webkit-flex;
+	-webkit-flex: 1 0 0;
+	-webkit-flex-flow:row;
+	-webkit-justify-content:center; /* align content center */ 
+	/* -webkit-align-items:center; */
+	-webkit-order:3;
+}
+
+footer li{
+	display:inline;
+}
+
+}
+
+/* Larger than tablet */
+@media (min-width: 750px) {
+
+header {
+	display: -webkit-flex;
+	-webkit-flex: 1 0 0;
+	-webkit-justify-content:center; /* align content center */ 
+	-webkit-align-items:center;
+	-webkit-order:0;
+}
+
+article {
+	display: -webkit-flex;
+	-webkit-flex: 3 0 0;
+	-webkit-justify-content:center; /* align content center */ 
+	-webkit-flex-flow:column;
+	-webkit-align-items:center;
+	-webkit-order:1;
+}
+
+aside {
+	display: -webkit-flex;
+	-webkit-flex: 1 0 0;
+	-webkit-flex-flow: column;
+	-webkit-justify-content:center; /* align content center */ 
+	-webkit-align-items:center;
+	-webkit-order:2;
+}
+
+footer {
+	/* Flexbox properties */
+	display: -webkit-flex;
+	-webkit-flex: 0 0 0;
+	/* -webkit-flex-flow:row; */
+	/* -webkit-justify-content:center; /* align content center */ 
+	/* -webkit-align-items:center; */
+	-webkit-order:3;
+	/* Layout */
+}
+
+footer li{
+	display:inline;
+	padding:0.2em;
+}
+
+}
+
+/* Larger than desktop */
+@media (min-width: 1000px) {
+
+header {
+	display: -webkit-flex;
+	-webkit-flex: 1 0 0;
+	-webkit-justify-content:center; /* align content center */ 
+	-webkit-align-items:center;
+	-webkit-order:0;
+}
+
+article {
+	display: -webkit-flex;
+	-webkit-flex: 3 0 0;
+	-webkit-justify-content:center; /* align content center */ 
+	-webkit-flex-flow:column;
+	-webkit-align-items:center;
+	-webkit-order:1;
+}
+
+aside {
+	display: -webkit-flex;
+	-webkit-flex: 1 0 0;
+	-webkit-flex-flow: column;
+	-webkit-justify-content:center; /* align content center */ 
+	-webkit-align-items:center;
+	-webkit-order:2;
+}
+
+footer {
+	display: -webkit-flex;
+	-webkit-flex: 1 0 0;
+	-webkit-flex-flow:row;
+	-webkit-justify-content:center; /* align content center */ 
+	/* -webkit-align-items:center; */
+	-webkit-order:3;
+}
+
+footer li{
+	display:inline;
+}
+
+
+}
+
+/* Media Queries End */
 /* !!LAYOUT END */
 
-/* .flex{
-	display: -webkit-flex; /* Why -webkit-flex? See bottom 1.0 */
-	/* -webkit-flex-flow:column; /* -column. -row. */
-	/* -webkit-justify-content:flex-start; /* flex-start, flex-center, space-around, space-between */
-	/* -webkit-align-items: /*flex-start; /* stretch,*/ /*center; /**/
-	/* height: 100px;
-    width: 200px; */
-    /*-webkit-flex: 0 1 auto; /* shorthand for properties below, grow, shrink and basis */
-    /*-webkit-flex-grow: 0; /* adjust values to make it grow faster eg 1, 2, 3, 4, 5 */
-    /* -webkit-flex-shrink: 1;
-    /* -webkit-flex-basis: auto;*/ /* set to 0 if you want to use precise ratio's */
-    /*-webkit-order:
-}
 
-/*.flex > *{
-	height: 100px;
-	width: 100px;*/
-/*}
-
-
-
-
-
-
-
-/* footer {
-	margin-top: auto; /* Keep footer at bottom with margin at top of footer 
-}*/
-
-/* Test margin */
-
-/*.flex {
-	display: -webkit-flex;
-	-webkit-flex-flow:row;
-	-webkit-align-items: center;
-}
-
-.flex > *{
-	height: 100px;
-	width: 100px;
-	margin: auto;
-}
-*/
-header{
-    background: rgba(200, 200, 200, 1);
-}
-article{
-    background: rgba(200, 200, 200, .8);
-}
-aside{
-   background: rgba(200, 200, 200, .6);
-}
-footer{
-   background: rgba(200, 200, 200, .4);
-}
 
 /** 
 
@@ -124,6 +293,13 @@ display: flex;				NEW, Spec - Opera 12.1, Firefox 20+
 Thanks CSS Tricks: https://css-tricks.com/using-flexbox/
 
 */
+
+/* Older unused code */
+
+/* html, body{
+	height:100%;
+} */
+
 
 
 /* The Original CSS:
