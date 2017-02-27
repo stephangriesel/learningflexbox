@@ -9,7 +9,7 @@ header, footer {
 	height:100px; 
 }
 
-header, article, aside, footer { /* Not using at this stage, specifying them all individually at the moment */
+header, article, aside, footer { /* sections flexbox properties */
 	display: -webkit-flex; 
 	-webkit-justify-content:center; /* align content center */ 
 	-webkit-align-items:center;
