@@ -45,7 +45,7 @@ header {
 	/* Layout */
 	background: rgba(0, 0, 0, 0.5);
 	font-family: 'Titillium Web', sans-serif;
-	font-size:5em;
+	font-size:2em;
 	padding:1em;
 }
 
@@ -77,7 +77,7 @@ article p {
 
 aside {
 	/* Flexbox Properties */
-	-webkit-flex: 1 0 0;
+	-webkit-flex:1 0 0;
 	-webkit-flex-flow: column;
 	-webkit-order:2;
 	/* Layout */
