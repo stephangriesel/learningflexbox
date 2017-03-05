@@ -9,6 +9,22 @@ html {
 	font-size:1em;
 }
 
+a:link {
+    color: #8c9966;
+}
+
+a:visited {
+    color: #8c9966;
+}
+
+a:hover {
+    color: #d9e2bc;
+}
+
+a:active {
+    color: #FFFFFF;
+}
+
 h1 {
 	font-size:2em;
 	font-family: 'Dosis', sans-serif;
@@ -47,7 +63,6 @@ header {
 	border-radius: 1em 1em 0 0;
 	font-family: 'Titillium Web', sans-serif;
 	font-size:2em;
-	padding:1em;
 }
 
 article {
@@ -58,11 +73,15 @@ article {
 	/* Layout */
 	background: rgba(200, 200, 200, 200);
 	padding:1em;
+	text-align:center;
 }
 
 article p {
-	padding-bottom:1em;
-	padding-top:1em;
+	padding:1em;
+}
+
+article h1 {
+	padding-bottom:0.5em;
 }
 
 .skills h1{
@@ -70,13 +89,15 @@ article p {
 	text-alignment:center;
 }
 
-li {
+ul li {
 	padding-bottom:1em;
+	list-style-type:none;
 }
 
 /* Additional styles inside article element */
 .boldtext {
 	font-weight:bold;
+	font-size:1.2em;
 }
 
 aside {
@@ -87,6 +108,7 @@ aside {
 	/* Layout */
 	background: rgba(200, 200, 200, .6);
 	padding:1em;
+	text-align:center;
 }
 
 footer {
@@ -97,7 +119,6 @@ footer {
 	/* Layout */
 	background: rgba(200, 200, 200, .4);
 	border-radius:0 0 2em 2em;
-	padding:1em;
 }
 
 footer li {
@@ -105,6 +126,50 @@ footer li {
 	/*Social Icons*/
 	padding:1em;
 }
+
+/* About section */
+
+/* Icon Right */
+
+#about {
+	display:-webkit-flex;
+	-webkit-align-items:center;
+	-webkit-justify-content:center;
+}
+
+#about .halfleft {
+	/* layout */
+	float:left;
+	width:70%;
+}
+
+#about .halfright {
+	/* layout */
+	float:left;
+	width:20%;
+}
+
+/* Icon Left */
+
+#about2 {
+	display:-webkit-flex;
+	-webkit-align-items:center;
+	-webkit-justify-content:center;
+}
+
+#about2 .halfleft2 {
+	/* layout */
+	float:left;
+	width:25%;
+}
+
+#about2 .halfright2 {
+	/* layout */
+	float:left;
+	width:75%;
+}
+
+
 
 /* ######################################### */
 /* Media Queries Start */
@@ -147,7 +212,6 @@ header {
 	-webkit-order:0;
 	/* Layout */
 	background: rgba(0, 0, 0, 0.5);
-	padding:1em;
 }
 
 article {
@@ -183,13 +247,30 @@ footer {
 	-webkit-order:3;
 	/* Layout */
 	background: rgba(200, 200, 200, .4);
-	padding:1em;
 }
 
 footer li {
 	display:inline;
 }
 
+/* About section */
+
+#about {
+	display:-webkit-flex;
+	-webkit-align-items:center;
+	-webkit-justify-content:center;
+}
+
+#about .halfleft {
+	/* layout */
+	float:left;
+	width:70%;
+}
+
+#about .halfright {
+	/* layout */
+	float:left;
+	width:20%;
 }
 
 /* Larger than desktop */
